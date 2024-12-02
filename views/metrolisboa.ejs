@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="metro.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script async src="metrolisboa.js">
+  </script>
+  <script>
+    var available_metro_stations = '<%= available_station %>';
+    available_metro_stations = available_metro_stations.split(',');
+  </script>
+</head>
+
+<body>
+  <div class="header">
+    <a href="" class="logo">TransportesDeLisboa</a>
+    <div class="header-right">
+      <a class="active" href="">Home</a>
+      <a href="">Contact</a>
+      <a href="">About</a>
+    </div>
+  </div>
+  <!--   figure out how to put ejs in local javascript-->
+  <div class="header_status">
+    <a class="logo">Linha amarela:<%= metrostatus.amarela %></a>
+    <a class="logo">Linha azul:<%= metrostatus.azul %></a>
+    <a class="logo">Linha verde:<%= metrostatus.verde %></a>
+    <a class="logo">Linha vermelha:<%= metrostatus.vermelha %></a>
+  </div>
+  <div class="metro-form">
+    <div class="form-group">
+      <label for="metrostation1">Metrostation:</label>
+      <br>
+      <div class="input-button">
+        <input type="text" id="metrostation1" name="metrostation">
+      </div>
+    </div>
+    <button id="send">Send</button>
+  </div>
+
+
+
+
+
+</body>
+
+</html>
